@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apexovivafeed - Modern Tech Blog & Reviews</title>
+    <link rel="stylesheet" href="styles-optimized.css">
+    <link rel="stylesheet" href="blog-enhancements.css">
+    <link rel="stylesheet" href="blog-modal-enhanced.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="nav-brand">
+                <span class="logo-text">APEXOVIVAFEED</span>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#featured" class="nav-link">Featured</a></li>
+                <li><a href="#blog" class="nav-link">Articles</a></li>
+                <li><a href="#products" class="nav-link">Products</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="search-toggle"><i class="fas fa-search"></i></button>
+                <button class="theme-toggle"><i class="fas fa-moon"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-overlay-content">
+            <input type="text" id="overlaySearch" placeholder="Type to search..." autofocus>
+            <button class="search-close"><i class="fas fa-times"></i></button>
+        </div>
+    </div>
+
+    <!-- Hero Section with Split Layout -->
+    <section id="home" class="hero-split">
+        <div class="hero-left">
+            <div class="hero-content">
+                <div class="hero-badge">Your Ultimate Lifestyle Guide</div>
+                <h1 class="hero-title">Discover, Learn, and Live Better Every Day</h1>
+                <p class="hero-description">From technology and fashion to health and travel, explore comprehensive guides, honest reviews, and inspiring stories that enrich your lifestyle and broaden your horizons.</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Articles</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">150+</span>
+                        <span class="stat-label">Products</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50K</span>
+                        <span class="stat-label">Readers</span>
+                    </div>
+                </div>
+                <div class="hero-actions">
+                    <a href="#featured" class="btn btn-primary">Start Reading</a>
+                    <a href="#newsletter" class="btn btn-outline">Subscribe</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="hero-image-grid">
+                <div class="hero-img-1">
+                    <img src="https://images.unsplash.com/photo-1481487196290-c152efe083f5?w=800" alt="Modern Living">
+                </div>
+                <div class="hero-img-2">
+                    <img src="https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?w=800" alt="Travel Destination">
+                </div>
+                <div class="hero-img-3">
+                    <img src="https://images.unsplash.com/photo-1493770348161-369560ae357d?w=800" alt="Healthy Food">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section id="featured" class="featured-section">
+        <div class="container-fluid">
+            <div class="section-header">
+                <h2 class="section-title">Featured Stories</h2>
+                <div class="section-nav">
+                    <button class="section-nav-btn active" data-filter="all">All</button>
+                    <button class="section-nav-btn" data-filter="trending">Trending</button>
+                    <button class="section-nav-btn" data-filter="editors">Editor's Pick</button>
+                </div>
+            </div>
+            
+            <div class="featured-grid">
+                <!-- Main Feature -->
+                <article class="featured-main" data-category="trending">
+                    <div class="featured-image">
+                        <img src="https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?w=1200" alt="Sustainable Living">
+                        <div class="featured-overlay">
+                            <span class="featured-tag">Trending</span>
+                        </div>
+                    </div>
+                    <div class="featured-content">
+                        <div class="meta-info">
+                            <span class="author">Emma Thompson</span>
+                            <span class="date">January 15, 2025</span>
+                            <span class="read-time">8 min read</span>
+                        </div>
+                        <h3 class="featured-title">The Complete Guide to Sustainable Living: Transform Your Lifestyle in 2025</h3>
+                        <p class="featured-excerpt">Discover practical tips and innovative solutions for eco-friendly living. From zero-waste strategies to sustainable fashion choices, learn how small changes can make a big impact on our planet.</p>
+                        <a href="article-sustainable.html" class="btn-link">Read Full Story <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Side Features -->
+                <div class="featured-side">
+                    <article class="featured-card" data-category="editors" onclick="window.location.href='article-food.html'" style="cursor: pointer;">
+                        <img src="https://images.unsplash.com/photo-1543362906-acfc16c67564?w=600" alt="Healthy Food">
+                        <div class="featured-card-content">
+                            <span class="featured-badge">Editor's Pick</span>
+                            <h4>The Global Food Revolution</h4>
+                            <p class="featured-meta">January 19, 2025 • 13 min</p>
+                        </div>
+                    </article>
+
+                    <article class="featured-card" data-category="trending" onclick="window.location.href='article-travel.html'" style="cursor: pointer;">
+                        <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600" alt="Travel">
+                        <div class="featured-card-content">
+                            <span class="featured-badge">Breaking</span>
+                            <h4>Hidden Gems of Southeast Asia</h4>
+                            <p class="featured-meta">January 14, 2025 • 11 min</p>
+                        </div>
+                    </article>
+
+                    <article class="featured-card" data-category="editors" onclick="window.location.href='article-fashion.html'" style="cursor: pointer;">
+                        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600" alt="Fashion">
+                        <div class="featured-card-content">
+                            <span class="featured-badge">Hot</span>
+                            <h4>Sustainable Fashion 2025 Guide</h4>
+                            <p class="featured-meta">January 16, 2025 • 10 min</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Area with Sidebar -->
+    <section id="blog" class="content-area">
+        <div class="container-fluid">
+            <div class="content-wrapper">
+                <!-- Main Content -->
+                <div class="main-content">
+                    <div class="content-header">
+                        <div>
+                            <h2 class="section-title">Latest Articles</h2>
+                            <span id="articleCount" class="article-count">Showing all articles</span>
+                        </div>
+                        <div class="view-options">
+                            <button class="view-btn active" data-view="grid"><i class="fas fa-th"></i></button>
+                            <button class="view-btn" data-view="list"><i class="fas fa-list"></i></button>
+                            <button class="view-btn" data-view="masonry"><i class="fas fa-th-large"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Filter Tags -->
+                    <div class="filter-tags">
+                        <button class="tag-btn active" data-category="all">All Posts</button>
+                        <button class="tag-btn" data-category="lifestyle">Lifestyle</button>
+                        <button class="tag-btn" data-category="travel">Travel</button>
+                        <button class="tag-btn" data-category="health">Health & Fitness</button>
+                        <button class="tag-btn" data-category="fashion">Fashion</button>
+                        <button class="tag-btn" data-category="food">Food & Recipes</button>
+                        <button class="tag-btn" data-category="tech">Technology</button>
+                        <button class="tag-btn" data-category="business">Business</button>
+                    </div>
+
+                    <!-- Articles Grid -->
+                    <div class="articles-grid" id="articlesGrid">
+                        <!-- Article 1 -->
+                        <article class="article-card large" data-category="lifestyle" data-tags="wellness,productivity,mindfulness,self-care">
+                            <div class="article-image">
+                                <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800" alt="Mindful Living">
+                                <div class="article-overlay">
+                                    <span class="article-category">Lifestyle</span>
+                                </div>
+                            </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <img src="https://i.pravatar.cc/40?img=1" alt="Author" class="author-avatar">
+                                    <span class="author-name">Jessica Williams</span>
+                                    <span class="article-date">Jan 15, 2025</span>
+                                    <span class="read-time"><i class="far fa-clock"></i> 6 min</span>
+                                </div>
+                                <h3 class="article-title">The Science of Longevity: Evidence-Based Health Strategies</h3>
+                                <p class="article-excerpt">Transform your health with scientifically proven methods for living a longer, healthier life.</p>
+                                <div class="article-tags">
+                                    <span class="article-tag">wellness</span>
+                                    <span class="article-tag">longevity</span>
+                                    <span class="article-tag">health</span>
+                                </div>
+                                <div class="article-footer">
+                                    <a href="article-health.html" class="read-more">Read More</a>
+                                    <div class="article-stats">
+                                        <span><i class="far fa-eye"></i> 15.2K</span>
+                                        <span><i class="far fa-heart"></i> 1.2K</span>
+                                        <span><i class="far fa-comment"></i> 45</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Article 2 -->
+                        <article class="article-card" data-category="travel" data-tags="travel,indonesia,adventure,culture">
+                            <div class="article-image">
+                                <img src="https://images.unsplash.com/photo-1500835556837-99ac94a94552?w=600" alt="Travel Guide">
+                            </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span class="article-category">Travel</span>
+                                    <span class="article-date">Jan 18, 2025</span>
+                                    <span class="read-time"><i class="far fa-clock"></i> 10 min</span>
+                                </div>
+                                <h3 class="article-title">Bali Travel Guide: Beyond the Tourist Trail</h3>
+                                <p class="article-excerpt">Discover authentic experiences and hidden treasures in Indonesia's paradise island.</p>
+                                <a href="article-bali.html" class="read-more">Continue Reading</a>
+                            </div>
+                        </article>
+
+                        <!-- Article 3 -->
+                        <article class="article-card" data-category="health" data-tags="fitness,workout,health,exercise">
+                            <div class="article-image">
+                                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600" alt="Fitness">
+                            </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span class="article-category">Health & Fitness</span>
+                                    <span class="article-date">Jan 22, 2025</span>
+                                    <span class="read-time"><i class="far fa-clock"></i> 7 min</span>
+                                </div>
+                                <h3 class="article-title">HIIT vs Yoga: Finding Your Perfect Workout</h3>
+                                <p class="article-excerpt">Compare two popular fitness approaches and find what works best for your goals.</p>
+                                <a href="article-fitness.html" class="read-more">Continue Reading</a>
+                            </div>
+                        </article>
+
+                        <!-- Article 4 -->
+                        <article class="article-card tall" data-category="fashion" data-tags="fashion,sustainability,style,eco-friendly">
+                            <div class="article-image">
+                                <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=600" alt="Fashion Trends">
+                            </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span class="article-category">Fashion</span>
+                                    <span class="article-date">Jan 25, 2025</span>
+                                    <span class="read-time"><i class="far fa-clock"></i> 8 min</span>
+                                </div>
+                                <h3 class="article-title">Sustainable Fashion 2025</h3>
+                                <p class="article-excerpt">The complete guide to eco-friendly style and ethical fashion.</p>
+                                <a href="article-fashion.html" class="read-more">Continue Reading</a>
+                            </div>
+                        </article>
+
+                        <!-- Article 5 -->
+                        <article class="article-card" data-category="food" data-tags="nutrition,vegan,recipes,health">
+                            <div class="article-image">
+                                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600" alt="Healthy Food">
+                            </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span class="article-category">Food & Recipes</span>
+                                    <span class="article-date">Jan 28, 2025</span>
+                                    <span class="read-time"><i class="far fa-clock"></i> 9 min</span>
+                                </div>
+                                <h3 class="article-title">Plant-Based Meals: 30-Day Challenge Guide</h3>
+                                <p class="article-excerpt">Delicious recipes and tips for embracing a plant-forward lifestyle.</p>
+                                <a href="article-plantbased.html" class="read-more">Continue Reading</a>
+                            </div>
+                        </article>
+
+                        <!-- Article 6 -->
+                        <article class="article-card wide" data-category="technology" data-tags="ai,technology,innovation,future">
+                            <div class="article-image">
+                                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800" alt="AI Technology">
+                            </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span class="article-category">Technology</span>
+                                    <span class="article-date">Jan 18, 2025</span>
+                                    <span class="read-time"><i class="far fa-clock"></i> 15 min</span>
+                                </div>
+                                <h3 class="article-title">AI Revolution 2025: How Machine Learning is Transforming Every Industry</h3>
+                                <p class="article-excerpt">Explore how artificial intelligence is reshaping healthcare, finance, manufacturing, and creative industries.</p>
+                                <a href="article-tech.html" class="read-more">Continue Reading</a>
+                            </div>
+                        </article>
+
+                        <!-- Article for Travel -->
+                        <article class="article-card" data-category="travel" data-tags="travel,adventure,southeast-asia,culture">
+                            <div class="article-image">
+                                <img src="https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?w=600" alt="Southeast Asia">
+                            </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span class="article-category">Travel</span>
+                                    <span class="article-date">Jan 14, 2025</span>
+                                    <span class="read-time"><i class="far fa-clock"></i> 11 min</span>
+                                </div>
+                                <h3 class="article-title">Hidden Gems of Southeast Asia</h3>
+                                <p class="article-excerpt">An insider's guide to off-the-beaten-path adventures across Southeast Asia's most enchanting destinations.</p>
+                                <a href="article-travel.html" class="read-more">Continue Reading</a>
+                            </div>
+                        </article>
+
+                        <!-- Article for Food -->
+                        <article class="article-card" data-category="food" data-tags="food,culinary,innovation,sustainability">
+                            <div class="article-image">
+                                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600" alt="Culinary Innovation">
+                            </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span class="article-category">Food & Cuisine</span>
+                                    <span class="article-date">Jan 19, 2025</span>
+                                    <span class="read-time"><i class="far fa-clock"></i> 13 min</span>
+                                </div>
+                                <h3 class="article-title">The Global Food Revolution</h3>
+                                <p class="article-excerpt">How culinary innovation and sustainable practices are reshaping our plates and the future of food.</p>
+                                <a href="article-food.html" class="read-more">Continue Reading</a>
+                            </div>
+                        </article>
+
+                        <!-- Article for Sustainable Living -->
+                        <article class="article-card wide" data-category="lifestyle" data-tags="sustainability,eco-friendly,environment,lifestyle">
+                            <div class="article-image">
+                                <img src="https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?w=800" alt="Sustainable Living">
+                            </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span class="article-category">Lifestyle</span>
+                                    <span class="article-date">Jan 15, 2025</span>
+                                    <span class="read-time"><i class="far fa-clock"></i> 12 min</span>
+                                </div>
+                                <h3 class="article-title">The Complete Guide to Sustainable Living</h3>
+                                <p class="article-excerpt">Transform your lifestyle in 2025 with practical tips for eco-friendly living, from zero-waste strategies to renewable energy.</p>
+                                <a href="article-sustainable.html" class="read-more">Continue Reading</a>
+                            </div>
+                        </article>
+                        
+                        <!-- Load More -->
+                        <div class="load-more-section" style="grid-column: 1 / -1; text-align: center; margin-top: 2rem;">
+                            <button class="btn btn-outline-primary" id="loadMoreBtn">Load More Articles</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <!-- Search Widget -->
+                    <div class="widget search-widget">
+                        <h3 class="widget-title">Search</h3>
+                        <div class="widget-content">
+                            <input type="text" placeholder="Search articles..." class="widget-search">
+                            <button class="widget-search-btn"><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Trending Widget -->
+                    <div class="widget trending-widget">
+                        <h3 class="widget-title">Trending Now</h3>
+                        <div class="widget-content">
+                            <div class="trending-item">
+                                <span class="trending-number">01</span>
+                                <div class="trending-content">
+                                    <h4>10 Morning Habits That Changed My Life</h4>
+                                    <span class="trending-views">18.5K views</span>
+                                </div>
+                            </div>
+                            <div class="trending-item">
+                                <span class="trending-number">02</span>
+                                <div class="trending-content">
+                                    <h4>Budget Travel: Europe Under $50/Day</h4>
+                                    <span class="trending-views">15.2K views</span>
+                                </div>
+                            </div>
+                            <div class="trending-item">
+                                <span class="trending-number">03</span>
+                                <div class="trending-content">
+                                    <h4>Plant-Based Diet: Complete Beginner Guide</h4>
+                                    <span class="trending-views">12.8K views</span>
+                                </div>
+                            </div>
+                            <div class="trending-item">
+                                <span class="trending-number">04</span>
+                                <div class="trending-content">
+                                    <h4>Minimalist Wardrobe: 30 Items Only</h4>
+                                    <span class="trending-views">10.5K views</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categories Widget -->
+                    <div class="widget categories-widget">
+                        <h3 class="widget-title">Categories</h3>
+                        <div class="widget-content">
+                            <div class="category-item">
+                                <span>Lifestyle</span>
+                                <span class="category-count">156</span>
+                            </div>
+                            <div class="category-item">
+                                <span>Travel & Adventure</span>
+                                <span class="category-count">89</span>
+                            </div>
+                            <div class="category-item">
+                                <span>Health & Wellness</span>
+                                <span class="category-count">124</span>
+                            </div>
+                            <div class="category-item">
+                                <span>Fashion & Beauty</span>
+                                <span class="category-count">76</span>
+                            </div>
+                            <div class="category-item">
+                                <span>Food & Recipes</span>
+                                <span class="category-count">93</span>
+                            </div>
+                            <div class="category-item">
+                                <span>Technology</span>
+                                <span class="category-count">68</span>
+                            </div>
+                            <div class="category-item">
+                                <span>Business & Finance</span>
+                                <span class="category-count">52</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Newsletter Widget -->
+                    <div class="widget newsletter-widget">
+                        <h3 class="widget-title">Newsletter</h3>
+                        <div class="widget-content">
+                            <p>Get the latest tech news delivered to your inbox</p>
+                            <form class="newsletter-form">
+                                <input type="email" placeholder="Your email address">
+                                <button type="submit" class="btn btn-primary">Subscribe</button>
+                            </form>
+                            <span class="newsletter-note">Join 50,000+ subscribers</span>
+                        </div>
+                    </div>
+
+                    <!-- Social Widget -->
+                    <div class="widget social-widget">
+                        <h3 class="widget-title">Follow Us</h3>
+                        <div class="widget-content">
+                            <div class="social-grid">
+                                <a href="#" class="social-item twitter">
+                                    <i class="fab fa-twitter"></i>
+                                    <span>45.2K</span>
+                                </a>
+                                <a href="#" class="social-item facebook">
+                                    <i class="fab fa-facebook"></i>
+                                    <span>32.8K</span>
+                                </a>
+                                <a href="#" class="social-item instagram">
+                                    <i class="fab fa-instagram"></i>
+                                    <span>28.5K</span>
+                                </a>
+                                <a href="#" class="social-item youtube">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>19.7K</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tags Widget -->
+                    <div class="widget tags-widget">
+                        <h3 class="widget-title">Popular Tags</h3>
+                        <div class="widget-content">
+                            <div class="tags-cloud">
+                                <a href="#" class="tag">Wellness</a>
+                                <a href="#" class="tag">Travel</a>
+                                <a href="#" class="tag">Fitness</a>
+                                <a href="#" class="tag">Fashion</a>
+                                <a href="#" class="tag">Cooking</a>
+                                <a href="#" class="tag">Mindfulness</a>
+                                <a href="#" class="tag">DIY</a>
+                                <a href="#" class="tag">Photography</a>
+                                <a href="#" class="tag">Sustainable</a>
+                                <a href="#" class="tag">Beauty</a>
+                                <a href="#" class="tag">Tech</a>
+                                <a href="#" class="tag">Business</a>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Showcase -->
+    <section id="products" class="products-showcase">
+        <div class="container-fluid">
+            <div class="section-header">
+                <h2 class="section-title">Featured Products</h2>
+                <a href="#" class="section-link">View All Products <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="products-carousel">
+                <!-- Product 1 -->
+                <div class="product-slide">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600" alt="Smart Watch">
+                        <div class="product-badge">Hot</div>
+                        <div class="product-actions">
+                            <button class="action-btn"><i class="far fa-heart"></i></button>
+                            <button class="action-btn"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span>4.8 (523)</span>
+                        </div>
+                        <h3 class="product-title">AI-Powered Smart Devices</h3>
+                        <p class="product-desc">Latest in AI and wearable technology</p>
+                        <div class="product-footer">
+                            <span class="product-price">$399</span>
+                            <a href="product-smartwatch.html" class="btn btn-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-slide">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600" alt="Running Shoes">
+                        <div class="product-badge new">New</div>
+                        <div class="product-actions">
+                            <button class="action-btn"><i class="far fa-heart"></i></button>
+                            <button class="action-btn"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span>5.0 (342)</span>
+                        </div>
+                        <h3 class="product-title">Performance Fitness Gear</h3>
+                        <p class="product-desc">Equipment for longevity and health</p>
+                        <div class="product-footer">
+                            <span class="product-price">$189</span>
+                            <a href="product-shoes.html" class="btn btn-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-slide">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=600" alt="Sunglasses">
+                        <div class="product-badge trending">Trending</div>
+                        <div class="product-actions">
+                            <button class="action-btn"><i class="far fa-heart"></i></button>
+                            <button class="action-btn"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span>4.6 (412)</span>
+                        </div>
+                        <h3 class="product-title">Sustainable Fashion Accessories</h3>
+                        <p class="product-desc">Eco-friendly style with premium quality</p>
+                        <div class="product-footer">
+                            <span class="product-price">$159</span>
+                            <a href="product-sunglasses.html" class="btn btn-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-slide">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600" alt="Headphones">
+                        <div class="product-badge">Best Seller</div>
+                        <div class="product-actions">
+                            <button class="action-btn"><i class="far fa-heart"></i></button>
+                            <button class="action-btn"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span>4.7 (892)</span>
+                        </div>
+                        <h3 class="product-title">Wireless Studio Headphones</h3>
+                        <p class="product-desc">Premium sound with active noise cancellation</p>
+                        <div class="product-footer">
+                            <span class="product-price">$299</span>
+                            <a href="product-headphones.html" class="btn btn-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <span class="section-label">About Us</span>
+                    <h2 class="about-title">Your Complete Lifestyle Companion Since 2025</h2>
+                    <p class="about-description">
+                        Apexovivafeed is your trusted source for everything that enriches modern living. From travel adventures and wellness tips to fashion trends and culinary delights, our diverse team of experts and passionate writers bring you authentic stories, honest reviews, and practical advice to help you live your best life.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Expert Analysis & Reviews</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Real-World Testing</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Unbiased Recommendations</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>24/7 Tech Support Community</span>
+                        </div>
+                    </div>
+                    <div class="about-actions">
+                        <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                        <a href="#" class="btn-link">Learn More About Our Process <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="about-images">
+                    <div class="image-grid">
+                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600" alt="Team" class="about-img-1">
+                        <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=600" alt="Technology" class="about-img-2">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600" alt="Innovation" class="about-img-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2 class="contact-title">Let's Connect</h2>
+                    <p class="contact-description">Have questions, suggestions, or want to collaborate? We'd love to hear from you.</p>
+                    
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email Us</h4>
+                                <p>contact@apexovivafeed.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Call Us</h4>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Visit Us</h4>
+                                <p>Silicon Valley, CA 94025</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">APEXOVIVAFEED</h3>
+                    <p>Your gateway to tomorrow's technology</p>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <form class="footer-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-main">
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#featured">Featured</a></li>
+                        <li><a href="#blog">Articles</a></li>
+                        <li><a href="#products">Products</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#">Lifestyle</a></li>
+                        <li><a href="#">Travel Guides</a></li>
+                        <li><a href="#">Health & Wellness</a></li>
+                        <li><a href="#">Fashion & Style</a></li>
+                        <li><a href="#">Food & Dining</a></li>
+                        <li><a href="#">Technology</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="#">Support Center</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Apexovivafeed. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Article Modal -->
+    <div id="articleModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div id="articleContent"></div>
+        </div>
+    </div>
+
+    <!-- Product Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div id="productContent"></div>
+        </div>
+    </div>
+
+    <script src="enhanced-articles.js"></script>
+    <script src="script-fixed.js"></script>
+    <script>
+        // Inline script to ensure functions are available
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded, checking article system...');
+            
+            // Check if openArticle is available
+            if (typeof window.openArticle !== 'function') {
+                console.error('openArticle not found, creating fallback...');
+                
+                // Create a basic openArticle function
+                window.openArticle = function(articleId) {
+                    console.log('Fallback openArticle called for:', articleId);
+                    
+                    // Try to get the modal
+                    const modal = document.getElementById('articleModal');
+                    const content = document.getElementById('articleContent');
+                    
+                    if (!modal || !content) {
+                        alert('Article modal not found. Please check the page structure.');
+                        return;
+                    }
+                    
+                    // Show a simple message
+                    content.innerHTML = `
+                        <div style="padding: 20px;">
+                            <h2>Loading article: ${articleId}</h2>
+                            <p>If this message persists, there may be an issue with the article data.</p>
+                            <button onclick="document.getElementById('articleModal').style.display='none'">Close</button>
+                        </div>
+                    `;
+                    
+                    modal.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
+                    
+                    // Try to load the actual article if available
+                    if (typeof articles !== 'undefined' && articles[articleId]) {
+                        const article = articles[articleId];
+                        content.innerHTML = `
+                            <article class="article-full">
+                                <span class="modal-close" onclick="this.closest('.modal').style.display='none'; document.body.style.overflow='auto';">&times;</span>
+                                <img src="${article.image}" alt="${article.title}" class="article-hero" style="width:100%; max-height:400px; object-fit:cover;">
+                                <h1 style="color: #00ffff; margin: 20px 0;">${article.title}</h1>
+                                <div style="color: #999; margin-bottom: 20px;">
+                                    By ${article.author} | ${article.date} | ${article.category}
+                                </div>
+                                <div style="line-height: 1.6; color: #ccc;">
+                                    ${article.content}
+                                </div>
+                            </article>
+                        `;
+                    }
+                };
+            }
+            
+            // Re-attach click handlers using addEventListener
+            document.querySelectorAll('[onclick*="openArticle"]').forEach(function(element) {
+                const onclickAttr = element.getAttribute('onclick');
+                element.removeAttribute('onclick');
+                element.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    // Extract article ID from the onclick string
+                    const match = onclickAttr.match(/openArticle\(['"]([^'"]+)['"]\)/);
+                    if (match && match[1]) {
+                        console.log('Opening article via event listener:', match[1]);
+                        window.openArticle(match[1]);
+                    }
+                    return false;
+                });
+            });
+            
+            console.log('Article system initialized');
+        });
+    </script>
+    
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
